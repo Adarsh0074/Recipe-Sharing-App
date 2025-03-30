@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing App</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#add-recipe">Add Recipe</a></li>
+                <li><a href="#view-recipes">View Recipes</a></li>
+                <li><button id="dark-mode-toggle">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="add-recipe">
+        <h2>Add New Recipe</h2>
+        <form id="recipe-form">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" required>
+
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" required></textarea>
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Drinks">Drinks</option>
+            </select>
+
+            <label for="steps">Preparation Steps:</label>
+            <textarea id="steps" required></textarea>
+
+            <button type="submit">Add Recipe</button>
+        </form>
+    </section>
+
+    <section id="view-recipes">
+        <h2>Recipes</h2>
+        <label for="filter">Filter by Category:</label>
+        <select id="filter">
+            <option value="All">All</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Drinks">Drinks</option>
+        </select>
+        <div id="recipe-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
